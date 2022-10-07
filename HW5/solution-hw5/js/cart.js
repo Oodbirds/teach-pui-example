@@ -1,3 +1,4 @@
+//declaration of classes and dictionaries
 class Roll {
     constructor(rollType, rollGlazing, packSize, basePrice) {
         this.type = rollType;
@@ -6,6 +7,7 @@ class Roll {
         this.basePrice = basePrice;
     }
 }
+//roll, glaze, pack dictionaries
 const rollType = {
     "Original": {
         "basePrice": 2.49,
@@ -62,11 +64,13 @@ const pack = {
     }
 };
 
+//declaration of array and template
 let cart = []
 let productList = document.getElementById("prodList");
 console.log(productList);
 let template = document.getElementById("my-paragraph");
 
+//function to calculate price of total cinamon roll and add roll to cart
 function calculatePrice(roll, glazing, packSize){
     let totalPrice = Math.round(((rollType[roll].basePrice + glaze[glazing].price)*pack[packSize].priceChange)*100)/100;
     console.log("total price of unit " + totalPrice);
@@ -76,17 +80,19 @@ function addToCart(rollObject){
     cart.push(rollObject);
 }
 
-
+//creation of roll objects
 let original = new Roll("Original","Sugar Milk",1,calculatePrice("Original","Sugar Milk",1));
 let walnut = new Roll("Walnut","Vanilla Milk",12, calculatePrice("Walnut","Vanilla Milk",12));
 let raisin = new Roll("Raisin","Sugar Milk",3, calculatePrice("Raisin","Sugar Milk",3));
 let apple = new Roll("Apple", "Original", 3, calculatePrice("Apple","Original",3));
 
+//adding object to cart
 addToCart(original);
 addToCart(walnut);
 addToCart(raisin);
 addToCart(apple);
 
+//populate DOM with templated cinnamon rolls from cart array
 function addCinnamonRoll(cinnamonRoll){
     const templateClone = template.content.cloneNode(true);
     let image = templateClone.querySelector("img");
@@ -106,7 +112,7 @@ function addCinnamonRoll(cinnamonRoll){
     let templateContent = template.content;
     productList.appendChild(templateClone);
 }
-
+//function to add up total price of cart items, also display items
 function displayCart(){
     let cartTotalDisplay = document.getElementById("price-number");
     let cartTotal = 0;
@@ -123,6 +129,7 @@ function displayCart(){
     console.log("price cat total "+ cartTotal);
 }
 
+//removes and updates cinamon rolls in DOM 
 function remover(target){
 //remove target from cart
     for(let i = 0; i < cart.length;i++){
