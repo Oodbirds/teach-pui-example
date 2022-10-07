@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Product Detail Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100;1,200&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/price.js"></script>
+    <script defer src="../js/rollsData.js"></script>
+
+    
+  </head>
+
+  <body>
+    <header >
+      <a id = "logo" href = "index.html">
+      <img src = "../logo/logo-01.svg" width = "200" alt = "logo">
+      </a>    
+      <div class = "title">
+          <nav>
+              <a class = "current-page" href="index.html"> PRODUCTS </a> 
+              <br>
+              <a href="cart.html"> CART </a> 
+          </nav>
+          <hr>
+          <h3 id="page-title" >Original Cinnamon Roll</h3>
+      </div>
+  </header>
+    <section class = "product-info">
+        <img class = "product-image" id = "big-display" src="../products/original-cinnamon-roll.jpg" width="400" alt="Original cinnamon Roll"/>
+        <div class="additional-info">
+          <p class = "description"> Customize our delicious hand-made cinnamon roll to your liking </p>
+          <div class="selection" >
+              <div class="description-selec">
+                <label class = "description" for="glazing"> Glazing</label><br/>
+                <select class = "description" id="glazingOptions" onchange="glazingChange(this)">
+                </select>
+              </div>
+              <div class="description-selec">
+                <label class = "description" for="pack-size">Pack Size</label><br/>
+                <select class = "description" id="pack-size" onchange="packChange(this)">
+                </select>
+              </div>
+          </div>
+          <div class = "total-calc">
+              <h4 class = "price" id = "total-price">2.49</h4>
+              <h4 class = "button" id ="add-cart">Add to Cart</h4>   
+          </div>
+        </div>
+    </section>
+  </body>
