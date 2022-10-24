@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="../js/cart.js"></script>
+  </head>
+
+  <body>
+    <template id="my-paragraph">
+        <div class = "product-checkout">
+            <div class = "image-remove">
+                <img class = "product-image" src="../products/original-cinnamon-roll.jpg" width="150" alt="Original cinnamon Roll"/>
+                <h5 class = "remove" onclick="remover(this)">remove</h5>
+            </div>
+            <div class = "incart">
+                <p>Original Cinnamon Roll</p>
+                <p>Glazing: Keep Original</p>
+                <p> Pack Size: 1</p>
+            </div>
+            <p class = "price">$2.49</p>
+        </div>
+    </template>
+    <header >
+        <a id = "logo" href = "index.html">
+        <img src = "../logo/logo-01.svg" width = "200" alt = "logo">
+        </a>    
+        <div class = "title">
+            <nav>
+                <a href="index.html"> PRODUCTS </a> 
+                <br>
+                <a class = "current-page" href="cart.html"> CART </a> 
+            </nav>
+            <hr>
+            <h3 id="page-title" >Shopping Cart</h3>
+        </div>
+    </header>
+
+    <section id="prodList" class= "prduct-incart">
+    </section>
+        <div class= "prduct-incart">
+            <hr class = "checkout">
+            <div class = "total">
+                <h4 class = "price" id = "price-total">Total: </h4>
+                <h4 class = "price" id = "price-number">29.94</h4>
+            </div>
+        <h4 class = "button" id = "checkout-button">checkout</h4> 
+        </div>
+  </body>

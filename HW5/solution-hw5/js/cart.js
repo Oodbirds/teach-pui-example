@@ -81,7 +81,8 @@ function addToCart(rollObject){
 }
 
 //creation of roll objects
-let original = new Roll("Original","Sugar Milk",1,calculatePrice("Original","Sugar Milk",1));
+let original = new Roll("Original","Sugar Milk",1);
+console.log("hello");
 let walnut = new Roll("Walnut","Vanilla Milk",12, calculatePrice("Walnut","Vanilla Milk",12));
 let raisin = new Roll("Raisin","Sugar Milk",3, calculatePrice("Raisin","Sugar Milk",3));
 let apple = new Roll("Apple", "Original", 3, calculatePrice("Apple","Original",3));
